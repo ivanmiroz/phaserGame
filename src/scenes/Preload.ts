@@ -10,7 +10,7 @@ export class Preload extends Scene
     
     preoad()
     {
-        this.load.image('sky', '/assets/sky.png');
+        this.load.image('sky', 'assets/sky.png');
     }
 
     create() {
