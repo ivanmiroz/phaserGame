@@ -1,10 +1,10 @@
 export let CONST = {
     
-    player: Array,
-    scoreText: Array,
+    player: {},
+    scoreText: String,
     score: 0,
-    stars: Array,
-    bombs: Array,
+    stars: {},
+    bombs: {},
     gameOver: false
 
 };

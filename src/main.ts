@@ -1,6 +1,5 @@
 import { Preload } from './scenes/Preload';
 import { Create } from './scenes/Create';
-import { Update } from './scenes/Update';
 
 import { Game, Types } from 'phaser';
 
@@ -25,8 +24,7 @@ const config: Types.Core.GameConfig = {
     },
     scene: [
         Preload,
-        Create,
-        Update
+        Create
     ]
 };
 

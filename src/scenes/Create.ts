@@ -56,7 +56,7 @@ export class Create extends Scene
             setXY: { x: 12, y: 0, stepX: 70 }
         });
         //make stars bounce 
-        CONST.stars.children.iterate(function (child) {
+        CONST.stars.children.iterate(function (child: {}) {
             child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
         });
 
@@ -78,7 +78,7 @@ export class Create extends Scene
     }
 
     //when hit the bomb
-    private hitBomb (player, bomb)
+    private hitBomb(player: {}, bomb: {})
     {
         this.physics.pause();
 
@@ -90,12 +90,12 @@ export class Create extends Scene
     }
 
     //when collect star
-    private collectStar (player, star)
+    private collectStar (player: {}, star: {})
     {
         star.disableBody(true, true);
 
         CONST.score += 10;
-        CONST.scoreText.setText('Score: ' + CONST.score);
+        CONST.scoreText.setText('score: ' + CONST.score);
 
         //bomb add logic
         if (CONST.stars.countActive(true) === 0)
