@@ -1,5 +1,6 @@
 import { Preload } from './scenes/Preload';
 import { Create } from './scenes/Create';
+import { Update } from './scenes/Update';
 
 import { Game, Types } from 'phaser';
 
@@ -15,9 +16,17 @@ const config: Types.Core.GameConfig = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { x: 0, y: 300 },
+            debug: false
+        }
+    },
     scene: [
         Preload,
-        Create
+        Create,
+        Update
     ]
 };
 
